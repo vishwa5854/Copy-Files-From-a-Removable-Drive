@@ -22,6 +22,6 @@ while True:
 			fileName += fil
 			cmd = 'xcopy ' + '"' + fileName + '"' + ' "D:\\Hey"'	
 			os.system(cmd)
-			break
+			
 	
 	time.sleep(5)

